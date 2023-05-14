@@ -1,12 +1,13 @@
-import random
+wiek = int(input("Wpisz swój wiek: "))
+czyA2 = True if input("Czy masz prawo jazdy kat. A2? (t/n): ") \
+    in ("t", "ta", "tak", "T") else False
+odIluA2 = 0
+if czyA2:
+    odIluA2 = int(input("Jak długo masz A2? Podaj ilość lat: "))
 
-traf = int(input("Zgadnij liczbę od 0 do 100: "))
-liczba = random.randrange(0, 100)
-if traf==liczba:
-    print("Zgadłeś! Wylosowana liczba to: "+liczba)
-elif (traf>liczba):
-    print("Liczba jest mniejsza")
+if wiek>=24 or (czyA2==True and odIluA2>=2 and wiek>=20):
+    print("Mozesz przystapic do egzaminu")
+    pass
 else:
-    print("Liczba jest większa")
-    
-
+    print("Nie mozesz przystapic do egzaminu")
+    pass
